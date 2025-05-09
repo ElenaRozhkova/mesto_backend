@@ -1,7 +1,7 @@
 const Card = require('../models/card');
-const NotFoundError = require('../errors/not-found.js');
-const ValidationError = require('../errors/validation-error.js');
-const ForbiddenError = require('../errors/forbidden-error.js');
+const NotFoundError = require('../api/errors/not-found.js');
+const ValidationError = require('../api/errors/validation-error.js');
+const ForbiddenError = require('../api/errors/forbidden-error.js');
 
 const {
   STATUS_OK, STATUS_CREATE,

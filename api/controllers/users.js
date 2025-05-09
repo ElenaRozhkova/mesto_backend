@@ -1,7 +1,7 @@
 // eslint-disable-next-line max-classes-per-file
 const jwt = require('jsonwebtoken'); // импортируем модуль jsonwebtoken
 const bcrypt = require('bcryptjs'); // импортируем bcrypt
-const User = require('../models/user');
+const User = require('../models/user.js');
 const NotFoundError = require('../errors/not-found.js');
 const UnauthorizedError = require('../errors/unauthorized-error.js');
 const DublikateError = require('../errors/dublikate-error.js');
@@ -9,7 +9,7 @@ const ValidationError = require('../errors/validation-error.js');
 
 const {
   STATUS_OK, STATUS_CREATE,
-} = require('../utils/error.js');
+} = require('../../utils/error.js');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 /*
