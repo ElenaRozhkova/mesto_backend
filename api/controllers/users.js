@@ -9,7 +9,7 @@ const ValidationError = require('../errors/validation-error.js');
 
 const {
   STATUS_OK, STATUS_CREATE,
-} = require('../../utils/error.js');
+} = require('./../utils/error.js');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 /*

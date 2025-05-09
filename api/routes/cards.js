@@ -1,6 +1,6 @@
 const { celebrate, Joi } = require('celebrate');
 const router = require('express').Router();
-const method = require('../../middlewares/method');
+
 
 const {
   getCards, createCard, deleteCard, likeCard, dislikeCard,

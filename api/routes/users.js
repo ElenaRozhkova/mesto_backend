@@ -1,6 +1,6 @@
 const { celebrate, Joi } = require('celebrate');
 const router = require('express').Router();
-const method = require('../../middlewares/method');
+
 const {
   getUsers, getUser, updateUser, updateAvatar, getUserbyId,
 } = require('../controllers/users');

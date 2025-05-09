@@ -3,11 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const { requestLogger, errorLogger } = require('../middlewares/logger');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const routeUser = require('./routes/users');
 const routeCard = require('./routes/cards');
 const NotFoundError = require('./errors/not-found.js');
-const centralerrors = require('../middlewares/central-errors.js');
+const centralerrors = require('./middlewares/central-errors.js');
 const { errors } = require('celebrate');
 require('dotenv').config();
 
@@ -37,3 +37,7 @@ app.get('*', () => {
 
 // Экспортируем сервер как серверлес-функцию для Vercel
 module.exports = serverless(app);
+/*const PORT = process.env.PORT || 3002;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+});*/

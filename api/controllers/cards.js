@@ -1,11 +1,11 @@
 const Card = require('../models/card');
-const NotFoundError = require('../api/errors/not-found.js');
-const ValidationError = require('../api/errors/validation-error.js');
-const ForbiddenError = require('../api/errors/forbidden-error.js');
+const NotFoundError = require('./../../api/errors/not-found.js');
+const ValidationError = require('./../../api/errors/validation-error.js');
+const ForbiddenError = require('./../../api/errors/forbidden-error.js');
 
 const {
   STATUS_OK, STATUS_CREATE,
-} = require('../utils/error.js');
+} = require('./../utils/error.js');
 
 module.exports.createCard = (req, res, next) => {
   const { name, link } = req.body;
