@@ -1,4 +1,4 @@
-const serverless = require('serverless-http');
+//const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -36,8 +36,8 @@ app.get('*', () => {
 });
 
 // Экспортируем сервер как серверлес-функцию для Vercel
-module.exports = serverless(app);
-/*const PORT = process.env.PORT || 3002;
+//module.exports = serverless(app);
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
-});*/
+});
