@@ -2,7 +2,7 @@
   "name": "express-mesto",
   "version": "1.0.0",
   "description": "`/routes` — папка с файлами роутера  \r `/controllers` — папка с файлами контроллеров пользователя и карточки   \r `/models` — папка с файлами описания схем пользователя и карточки",
-  "main": "app.js",
+  "main": "/api/index.js",
   "scripts": {
     "start": "node --openssl-legacy-provider api/index.js",
     "dev": "nodemon app.js",

@@ -1,4 +1,4 @@
-//const serverless = require('serverless-http');
+const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -10,7 +10,6 @@ const NotFoundError = require('./errors/not-found.js');
 const centralerrors = require('./middlewares/central-errors.js');
 const { errors } = require('celebrate');
 require('dotenv').config();
-const serverless = require('serverless-http');
 
 const app = express();
 
