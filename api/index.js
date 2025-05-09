@@ -11,8 +11,10 @@ const centralerrors = require('../middlewares/central-errors.js');
 const { errors } = require('celebrate');
 require('dotenv').config();
 
+// Создаем экземпляр приложения Express
 const app = express();
 
+// Подключаемся к MongoDB
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -35,12 +37,5 @@ app.get('*', () => {
   throw new NotFoundError('Ресурс не найден');
 });
 
-const PORT = process.env.PORT || 3002;
-
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`Локальный сервер запущен на порту ${PORT}`);
-  });
-}
-
-module.exports = app; // не serverless(app), если используешь @vercel/node
+// Экспортируем для Vercel (серверлес-функция)
+module.exports = app;
